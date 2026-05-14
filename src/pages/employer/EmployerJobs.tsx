@@ -37,13 +37,17 @@ export default function EmployerJobs() {
       </div>
     );
   }
+  console.log(user)
 
   return (
     <div className="jobs-container">
       <div className="header-section">
         <div>
           <h1 className="text-3xl font-bold text-white">ניהול משרות</h1>
-          <p className="text-white/60">שלום, {user?.name || "מעסיק"}</p>
+          {/* <p className="text-white/60">שלום, {user?.name || "מעסיק"}</p> */}
+          <p className="text-white/60">
+            שלום, {user?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || "מעסיק"}
+          </p>
         </div>
 
         <div className="flex items-center gap-3">
