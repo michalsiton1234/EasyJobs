@@ -341,7 +341,7 @@ export default function EmployerMatches() {
               }}
             >
               <LayoutDashboard size={18} />
-              לוח מנהל
+              להוספת משרה
             </button>
 
             <button onClick={handleOpenModal} className="btn-action btn-primary">

@@ -67,7 +67,9 @@ export function useEmployerMatches() {
   const loadOffers = async (userId: number) => {
     try {
       const empRes = await api.get(`/Employer/byUser/${userId}`);
+      console.log("empRes.data:", empRes.data); // ← הוסיפי
       const data = await GetMatchsByEmpID(empRes.data.id);
+      console.log("offers data:", data); // ← הוסיפי את זה
       setOffers(data);
     } catch (err) {
       console.error(err);
