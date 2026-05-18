@@ -1,0 +1,195 @@
+/* CandidateProfile.css */
+
+/* Container */
+.candidate-profile-page {
+  min-height: 100vh;
+  background-color: #080C14;
+  color: white;
+  padding: 1.5rem;
+}
+
+/* Loader */
+.candidate-loader {
+  min-height: 100vh;
+  background-color: #080C14;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.candidate-spinner {
+  width: 3rem;
+  height: 3rem;
+  border-width: 4px;
+  border-color: rgba(6, 182, 212, 0.3);
+  border-top-color: #06b6d4;
+  border-radius: 9999px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.candidate-loader-text {
+  margin-top: 1rem;
+  color: #22d3ee;
+}
+
+/* Header */
+.candidate-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.candidate-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background: linear-gradient(to bottom right, #22d3ee, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
+}
+
+.candidate-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.candidate-error {
+  color: #f87171;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Card */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid inputs */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.profile-field {
+  margin-bottom: 1.5rem;
+}
+
+/* Labels */
+.profile-label {
+  color: #22d3ee;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Level buttons */
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.level-btn {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.level-btn.active {
+  background-color: #06b6d4;
+  color: black;
+  border-color: #22d3ee;
+  font-weight: 700;
+}
+
+.level-btn.inactive {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #9ca3af;
+}
+
+.level-emoji {
+  font-size: 1.25rem;
+}
+
+.level-label {
+  font-size: 0.75rem;
+}
+
+/* Category buttons */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.category-btn {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  text-align: right;
+  transition: all 0.2s;
+}
+
+.category-btn.active {
+  background: rgba(6, 182, 212, 0.2);
+  border-color: #22d3ee;
+}
+
+.category-btn.inactive {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Switches */
+.switches-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  background: linear-gradient(to right, #22d3ee, #3b82f6);
+  color: black;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: opacity 0.2s;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+}
