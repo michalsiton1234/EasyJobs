@@ -1,0 +1,23 @@
+/* MyArea.css */
+
+/* רק classes ייחודיות שאין ב-Tailwind */
+
+.myarea-refresh-btn {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+
+.myarea-refresh-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.job-card-id {
+  font-size: 0.625rem;
+  background: #f3f4f6;
+  color: #9ca3af;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+}
